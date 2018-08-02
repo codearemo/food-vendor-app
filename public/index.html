@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Beta Chop</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/a/aa/Little_Chef.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+  <h1 class="uk-heading-line uk-text-center">
+    <span>Beta Chop</span>
+  </h1>
+  <ul uk-tab id="header-tabs">
+    <li>
+      <a href="#">Intercontinental</a>
+    </li>
+    <li>
+      <a href="#">Native</a>
+    </li>
+    <li>
+      <a href="#">Fast Food</a>
+    </li>
+
+  </ul>
+  <div id="wrapper">
+    <div id="my-tabs">
+    </div>
+    <div style="position: relative; display: flex;">
+      <div id="order-section">
+        <div id="accumulator">
+        </div>
+        <div>
+          <h4>
+            <strong>Total: </strong>
+          </h4>
+          <p></p>
+        </div>
+        <div>
+          <input type="button" class="uk-button uk-button-primary uk-margin-small-right" value="Make Order" uk-toggle="target: #modal-example">
+
+          <!-- This is the modal -->
+          <div id="modal-example" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+              <h2 class="uk-modal-title">Add Details</h2>
+              <form>
+
+                <div class="uk-margin">
+                  <div class="uk-inline">
+                    <span class="uk-form-icon" uk-icon="icon: user"></span>
+                    <input class="uk-input" type="email" placeholder="email" id="email">
+                  </div>
+                </div>
+
+              </form>
+              <p class="uk-text-right">
+                <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+                <button class="uk-button uk-button-primary" id="pay-btn" type="button">Pay</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ravesandboxapi.flutterwave.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
